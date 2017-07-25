@@ -1,11 +1,12 @@
 package Test;
 
 public class B {
-	private String st;
-	public B(String temp){
-		st = temp;
+	private C callback;
+	public B(C callback){
+		this.callback = callback;
 	}
 	public void printf(){
-		System.out.println(st);
+		int num_1 = 4, num_2 = 5;
+		callback.calculator(num_1, num_2);
 	}
 }

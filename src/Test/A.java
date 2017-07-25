@@ -1,10 +1,15 @@
 package Test;
 
 public class A {
-	public A(){
-		System.out.println("첫번째 A 구문");
-		B temp = new B("두번째 B입니다.");
-		temp.printf();
-		System.out.println("세번째 A 구문");
-	}
+	public static void main(String[] args){
+		C test = new C(){
+			@Override
+			public void calculator(int num_a,int num_b){
+				System.out.println("더한 결과 : " + (num_a+num_b));
+			}
+		};
+		
+		B event = new B(test);
+		event.printf();
+	}	
 }
